@@ -2,10 +2,10 @@ import mysql.connector
 from dotenv import load_dotenv
 import os
 load_dotenv()
-from flask import Flask, render_template, request, send_file
+from flask import Flask, render_template, request, send_file,redirect,url_for
 
 app = Flask(__name__)
-mydb=mysql.connector.connect(
+db=mysql.connector.connect(
     host=os.getenv("DB_HOST"),
     user=os.getenv("DB_USER"),
     password=os.getenv("DB_PASSWORD"),
