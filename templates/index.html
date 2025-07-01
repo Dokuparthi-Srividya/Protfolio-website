@@ -80,23 +80,7 @@
     </div>
   </div>
 </footer>
-<!--<footer class="footer">-->
-<!--  <div class="footer-container">-->
-<!--    <p>© 2025 Srividya Dokuparthi. All rights reserved.</p>-->
-<!--    <div class="social-icons">-->
-<!--      <a href="mailto:dokuparthisrividya@gmail.com" target="_blank" title="Email">-->
-<!--        <img src="https://img.icons8.com/ios-filled/30/ffffff/new-post.png" alt="Email">-->
-<!--      </a>-->
-<!--      <a href="https://www.linkedin.com/in/srividya-dokuparthi-3317b232a" target="_blank" title="LinkedIn">-->
-<!--        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn">-->
-<!--      </a>-->
-<!--      <a href="https://github.com/Dokuparthi-Srividya" target="_blank" title="GitHub">-->
-<!--        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">-->
-<!--      </a>-->
-<!--    </div>-->
-<!--&lt;!&ndash;      <button id="themeToggle" title="Toggle Dark/Light Mode">🌓 Mode</button>&ndash;&gt;-->
-<!--  </div>-->
-<!--</footer>-->
+
 <button id="backToTopBtn" title="Back to Top">Back</button>
 <script>
   const backToTopBtn = document.getElementById("backToTopBtn");
@@ -112,44 +96,7 @@
     });
   });
 </script>
-<!--<script>-->
-<!--  const toggleBtn = document.getElementById("themeToggle");-->
 
-<!--  toggleBtn.addEventListener("click", () => {-->
-<!--    document.body.classList.toggle("dark-mode");-->
-
-<!--    // Optional: Save preference-->
-<!--    const isDark = document.body.classList.contains("dark-mode");-->
-<!--    localStorage.setItem("darkMode", isDark ? "enabled" : "disabled");-->
-<!--  });-->
-
-<!--  // Apply saved theme on load-->
-<!--  window.addEventListener("DOMContentLoaded", () => {-->
-<!--    const saved = localStorage.getItem("darkMode");-->
-<!--    if (saved === "enabled") {-->
-<!--      document.body.classList.add("dark-mode");-->
-<!--    }-->
-<!--  });-->
-<!--</script>-->
-<!--<script>-->
-<!--  const toggleBtn = document.getElementById("themeToggle");-->
-
-<!--  // Check saved theme from localStorage-->
-<!--  const savedTheme = localStorage.getItem("theme");-->
-<!--  if (savedTheme) {-->
-<!--    document.body.classList.add(savedTheme);-->
-<!--    toggleBtn.textContent = savedTheme === "dark-mode" ? "☀️ Light" : "🌙 Dark";-->
-<!--  }-->
-
-<!--  toggleBtn.addEventListener("click", () => {-->
-<!--    document.body.classList.toggle("dark-mode");-->
-<!--    document.body.classList.toggle("light-mode");-->
-
-<!--    const currentTheme = document.body.classList.contains("dark-mode") ? "dark-mode" : "light-mode";-->
-<!--    localStorage.setItem("theme", currentTheme);-->
-<!--    toggleBtn.textContent = currentTheme === "dark-mode" ? "☀️ Light" : "🌙 Dark";-->
-<!--  });-->
-<!--</script>-->
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
   AOS.init({
@@ -157,24 +104,7 @@
     once: true
   });
 </script>
-<!--<script>-->
-<!--  const toggleBtn = document.getElementById("themeToggle");-->
-<!--  const body = document.body;-->
 
-<!--  // Check if dark mode was previously enabled-->
-<!--  if (localStorage.getItem("theme") === "dark") {-->
-<!--    body.classList.add("dark-mode");-->
-<!--    toggleBtn.textContent = "☀️";-->
-<!--  }-->
-
-<!--  toggleBtn.addEventListener("click", () => {-->
-<!--    body.classList.toggle("dark-mode");-->
-<!--    const isDark = body.classList.contains("dark-mode");-->
-
-<!--    toggleBtn.textContent = isDark ? "☀️" : "🌙";-->
-<!--    localStorage.setItem("theme", isDark ? "dark" : "light");-->
-<!--  });-->
-<!--</script>-->
 </div>
 <script src="{{ url_for('static', filename='theme.js') }}"></script>
 <script src="{{ url_for('static', filename='js/pageTransition.js') }}"></script>
