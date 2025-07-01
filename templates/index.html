@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body class="zoom-in">
+<!--<div id="transition-overlay"></div>-->
+<div class="page-transition">
+<!--<h1>Hello,I'm Srividya</h1>-->
+<h1><span id="typed"></span></h1>
+<!--<p>Electronics and Communication Engineering Student</p>-->
+<nav>
+    <button id="themeToggle" style="margin-top: 20px;">🌓Dark/Light Mode</button>
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/projects">Projects</a>
+    <a href="/contact">Contact</a>
+</nav>
+<section data-aos="fade-up"data-aos-delay="200">
+    <h2>Download My Resume</h2>
+    <a href="/resume" data-aos="zoom-in" data-aos-delay="400">
+    <button>Download Resume(PDF)</button>
+    </a>
+
+</section>
+
+
+<script>
+    var typed = new Typed('#typed', {
+        strings: ["Hello,I'm Srividya Dokuparthi","Electronics and Communication Engineering Student"],
+        typeSpeed: 50,
+        backSpeed: 25,
+        loop: true
+    });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("contactForm");
+    const msg = document.getElementById("successMessage");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault(); // Prevent page reload
+
+      // Show message
+      msg.classList.remove("hidden");
+      msg.classList.add("show");
+
+      // Reset form
+      form.reset();
+
+      // Hide message after 3 seconds
+      setTimeout(() => {
+        msg.classList.remove("show");
+        msg.classList.add("hidden");
+      }, 3000);
+    });
+  });
+</script>
+<footer class="footer">
+  <div class="footer-container">
+    <p>© 2025 Srividya Dokuparthi. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="mailto:dokuparthisrividya@gmail.com" target="_blank" title="Email">
+        <img src="https://img.icons8.com/ios-filled/30/ffffff/new-post.png" alt="Email">
+      </a>
+      <a href="https://www.linkedin.com/in/srividya-dokuparthi-3317b232a" target="_blank" title="LinkedIn">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn">
+      </a>
+      <a href="https://github.com/Dokuparthi-Srividya" target="_blank" title="GitHub">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" style="filter: invert(1);width: 30px;">
+      </a>
+    </div>
+  </div>
+</footer>
+<!--<footer class="footer">-->
+<!--  <div class="footer-container">-->
+<!--    <p>© 2025 Srividya Dokuparthi. All rights reserved.</p>-->
+<!--    <div class="social-icons">-->
+<!--      <a href="mailto:dokuparthisrividya@gmail.com" target="_blank" title="Email">-->
+<!--        <img src="https://img.icons8.com/ios-filled/30/ffffff/new-post.png" alt="Email">-->
+<!--      </a>-->
+<!--      <a href="https://www.linkedin.com/in/srividya-dokuparthi-3317b232a" target="_blank" title="LinkedIn">-->
+<!--        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn">-->
+<!--      </a>-->
+<!--      <a href="https://github.com/Dokuparthi-Srividya" target="_blank" title="GitHub">-->
+<!--        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">-->
+<!--      </a>-->
+<!--    </div>-->
+<!--&lt;!&ndash;      <button id="themeToggle" title="Toggle Dark/Light Mode">🌓 Mode</button>&ndash;&gt;-->
+<!--  </div>-->
+<!--</footer>-->
+<button id="backToTopBtn" title="Back to Top">Back</button>
+<script>
+  const backToTopBtn = document.getElementById("backToTopBtn");
+
+  window.addEventListener("scroll", () => {
+    backToTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
+  });
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
+<!--<script>-->
+<!--  const toggleBtn = document.getElementById("themeToggle");-->
+
+<!--  toggleBtn.addEventListener("click", () => {-->
+<!--    document.body.classList.toggle("dark-mode");-->
+
+<!--    // Optional: Save preference-->
+<!--    const isDark = document.body.classList.contains("dark-mode");-->
+<!--    localStorage.setItem("darkMode", isDark ? "enabled" : "disabled");-->
+<!--  });-->
+
+<!--  // Apply saved theme on load-->
+<!--  window.addEventListener("DOMContentLoaded", () => {-->
+<!--    const saved = localStorage.getItem("darkMode");-->
+<!--    if (saved === "enabled") {-->
+<!--      document.body.classList.add("dark-mode");-->
+<!--    }-->
+<!--  });-->
+<!--</script>-->
+<!--<script>-->
+<!--  const toggleBtn = document.getElementById("themeToggle");-->
+
+<!--  // Check saved theme from localStorage-->
+<!--  const savedTheme = localStorage.getItem("theme");-->
+<!--  if (savedTheme) {-->
+<!--    document.body.classList.add(savedTheme);-->
+<!--    toggleBtn.textContent = savedTheme === "dark-mode" ? "☀️ Light" : "🌙 Dark";-->
+<!--  }-->
+
+<!--  toggleBtn.addEventListener("click", () => {-->
+<!--    document.body.classList.toggle("dark-mode");-->
+<!--    document.body.classList.toggle("light-mode");-->
+
+<!--    const currentTheme = document.body.classList.contains("dark-mode") ? "dark-mode" : "light-mode";-->
+<!--    localStorage.setItem("theme", currentTheme);-->
+<!--    toggleBtn.textContent = currentTheme === "dark-mode" ? "☀️ Light" : "🌙 Dark";-->
+<!--  });-->
+<!--</script>-->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true
+  });
+</script>
+<!--<script>-->
+<!--  const toggleBtn = document.getElementById("themeToggle");-->
+<!--  const body = document.body;-->
+
+<!--  // Check if dark mode was previously enabled-->
+<!--  if (localStorage.getItem("theme") === "dark") {-->
+<!--    body.classList.add("dark-mode");-->
+<!--    toggleBtn.textContent = "☀️";-->
+<!--  }-->
+
+<!--  toggleBtn.addEventListener("click", () => {-->
+<!--    body.classList.toggle("dark-mode");-->
+<!--    const isDark = body.classList.contains("dark-mode");-->
+
+<!--    toggleBtn.textContent = isDark ? "☀️" : "🌙";-->
+<!--    localStorage.setItem("theme", isDark ? "dark" : "light");-->
+<!--  });-->
+<!--</script>-->
+</div>
+<script src="{{ url_for('static', filename='theme.js') }}"></script>
+<script src="{{ url_for('static', filename='js/pageTransition.js') }}"></script>
+</body>
+</html>
