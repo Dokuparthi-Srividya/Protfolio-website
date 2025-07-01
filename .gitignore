@@ -1,3 +1,20 @@
-.env
+#.env
+#__pycache__/
+#.idea/
+# Python
 __pycache__/
-.idea/
+*.py[cod]
+*.sqlite3
+
+# VS Code
+.vscode/
+
+# Environment variables
+.env
+
+# Byte-compiled / cache files
+*.pyo
+*.pyd
+
+# MacOS
+.DS_Store
